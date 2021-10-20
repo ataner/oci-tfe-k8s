@@ -1,15 +1,15 @@
 variable "tenancy_ocid" {
-    type = string
+  type = string
 }
 variable "user_ocid" {
-    type = string
+  type = string
 }
 variable "fingerprint" {
-    type = string
+  type = string
 }
 variable "private_key_path" {
-    type = string
+  type = string
 }
 variable "region" {
-    type = string
+  type = string
 }

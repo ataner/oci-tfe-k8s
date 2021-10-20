@@ -1,5 +1,15 @@
-variable "tenancy_ocid" {}
-variable "user_ocid" {}
-variable "fingerprint" {}
-variable "private_key_path" {}
-variable "region" {}
+variable "tenancy_ocid" {
+    type = string
+}
+variable "user_ocid" {
+    type = string
+}
+variable "fingerprint" {
+    type = string
+}
+variable "private_key_path" {
+    type = string
+}
+variable "region" {
+    type = string
+}

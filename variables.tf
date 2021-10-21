@@ -1,17 +1,22 @@
 variable "tenancy_ocid" {
   type = string
+  description = "OCID for tenancy"
 }
 variable "user_ocid" {
   type = string
+  description = "OCID for User"
 }
 variable "fingerprint" {
   type = string
+  description = "Key fingerprint"
 }
 variable "private_key" {
   type = string
+  description = "Private Key"
 }
 variable "region" {
   type = string
+  description = "OC Region"
 }
 
 /* 

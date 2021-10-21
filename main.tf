@@ -12,27 +12,27 @@ provider "oci" {
   region       = var.region
 }
 
-/* module "oke" {
+module "oke" {
   source  = "oracle-terraform-modules/oke/oci"
   version = "latest"
- 
- compartment_id                        =   var.compartment_id
-  tenancy_id                           =   var.tenancy_ocid
-  user_id                              =   var.user_ocid
 
-  ssh_private_key_path                  =   var.ssh_private_key_path
-  ssh_public_key_path                   =   var.ssh_public_key_path
+  compartment_id = var.compartment_id
+  tenancy_id     = var.tenancy_ocid
+  user_id        = var.user_ocid
 
-  label_prefix                          =   var.label_prefix
-  region                                =   var.region
+  ssh_private_key = var.ssh_private_key
+  ssh_public_key  = var.ssh_public_key
 
-  vcn_dns_label                         =   var.vcn_dns_label
-  vcn_name                              =   var.vcn_name
+  label_prefix = var.label_prefix
+  region       = var.region
 
-  bastion_shape                         =   var.bastion_shape
-  bastion_timezone                      =   var.bastion_timezone
+  vcn_dns_label = var.vcn_dns_label
+  vcn_name      = var.vcn_name
 
-  operator_shape                           =   var.operator_shape
-  operator_timezone                        =   var.operator_timezone
+  bastion_shape    = var.bastion_shape
+  bastion_timezone = var.bastion_timezone
 
-} */ 
+  operator_shape    = var.operator_shape
+  operator_timezone = var.operator_timezone
+
+}

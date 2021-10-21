@@ -7,6 +7,7 @@ POC for OKE using TFC. So many 3-letter acronyms. WTF OMG BBQ LOL!!!111
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
 
 ## Providers
 

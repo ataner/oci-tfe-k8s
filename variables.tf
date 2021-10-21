@@ -1,14 +1,17 @@
 variable "tenancy_ocid" {
   type        = string
   description = "OCID for tenancy"
+  default     = "ocid1.tenancy.oc1..1234567890"
 }
 variable "user_ocid" {
   type        = string
   description = "OCID for User"
+  default     = "ocid1.user.oc1..1234567890"
 }
 variable "fingerprint" {
   type        = string
   description = "Key fingerprint"
+  default     = "AA:BB:CC:DD:EE:FF"
 }
 variable "private_key" {
   type        = string
@@ -17,11 +20,13 @@ variable "private_key" {
 variable "region" {
   type        = string
   description = "OC Region"
+  default     = ""
 }
 
 variable "compartment_id" {
   description = "The compartment id where to create all resources."
   type        = string
+  default     = "ocid1.compartment.oc1..1234567890"
 }
 
 # ssh keys

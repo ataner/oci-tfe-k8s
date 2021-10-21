@@ -1,13 +1,3 @@
-terraform {
-  required_providers {
-    oci = {
-      source                = "hashicorp/oci"
-      configuration_aliases = [oci.home]
-    }
-  }
-  required_version = ">= 1.0.0"
-}
-
 module "oke" {
   source  = "oracle-terraform-modules/oke/oci"
   version = "4.0.0-RC1"

@@ -14,7 +14,7 @@ provider "oci" {
 
 module "oke" {
   source  = "oracle-terraform-modules/oke/oci"
-  version = "latest"
+  version = "3.3.0"
 
   compartment_id = var.compartment_id
   tenancy_id     = var.tenancy_ocid

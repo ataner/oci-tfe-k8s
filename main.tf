@@ -6,12 +6,13 @@ module "oke" {
   tenancy_id     = var.tenancy_ocid
   user_id        = var.user_ocid
 
+
   ssh_private_key = var.ssh_private_key
   ssh_public_key  = var.ssh_public_key
 
   label_prefix = var.label_prefix
   region       = var.region
-  home_region       = var.region
+  home_region  = var.region
 
   vcn_dns_label = var.vcn_dns_label
   vcn_name      = var.vcn_name

@@ -8,13 +8,31 @@ provider "oci" {
   tenancy_ocid     = var.tenancy_ocid
   user_ocid        = var.user_ocid
   fingerprint      = var.fingerprint
-  private_key_path = var.private_key_path
+  private_key = var.private_key
   region           = var.region
 }
 
-resource "oci_core_vcn" "internal" {
-  dns_label      = "internal"
-  cidr_block     = "172.16.0.0/20"
-  compartment_id = "<your_compartment_OCID_here>"
-  display_name   = "My internal VCN"
+module "oke" {
+  source  = "oracle-terraform-modules/oke/oci"
+  version = "latest"
+ 
+ compartment_id                        =   var.compartment_id
+  tenancy_id                           =   var.tenancy_ocid
+  user_id                              =   var.user_ocid
+
+  ssh_private_key_path                  =   var.ssh_private_key_path
+  ssh_public_key_path                   =   var.ssh_public_key_path
+
+  label_prefix                          =   var.label_prefix
+  region                                =   var.region
+
+  vcn_dns_label                         =   var.vcn_dns_label
+  vcn_name                              =   var.vcn_name
+
+  bastion_shape                         =   var.bastion_shape
+  bastion_timezone                      =   var.bastion_timezone
+
+  operator_shape                           =   var.operator_shape
+  operator_timezone                        =   var.operator_timezone
+
 }

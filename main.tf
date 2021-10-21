@@ -1,17 +1,3 @@
-terraform {
-  required_providers {
-    oci = { source = "hashicorp/oci" }
-  }
-}
-
-provider "oci" {
-  tenancy_ocid = var.tenancy_ocid
-  user_ocid    = var.user_ocid
-  fingerprint  = var.fingerprint
-  private_key  = var.private_key
-  region       = var.region
-}
-
 module "oke" {
   source  = "oracle-terraform-modules/oke/oci"
   version = "4.0.0-RC1"
@@ -25,6 +11,7 @@ module "oke" {
 
   label_prefix = var.label_prefix
   region       = var.region
+  home_region       = var.region
 
   vcn_dns_label = var.vcn_dns_label
   vcn_name      = var.vcn_name
@@ -35,4 +22,7 @@ module "oke" {
   operator_shape    = var.operator_shape
   operator_timezone = var.operator_timezone
 
+  providers = {
+    oci.home = oci.home
+  }
 }

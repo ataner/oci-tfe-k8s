@@ -26,7 +26,6 @@ variable "compartment_id" {
 
 # ssh keys
 variable "ssh_private_key" {
-  default     = "none"
   description = "The ssh private key"
   type        = string
 }

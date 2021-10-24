@@ -46,12 +46,8 @@ No resources.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_bastion_public_ip"></a> [bastion\_public\_ip](#output\_bastion\_public\_ip) | public ip address of bastion host |
 | <a name="output_cluster_id"></a> [cluster\_id](#output\_cluster\_id) | ID of the Kubernetes cluster |
 | <a name="output_kubeconfig"></a> [kubeconfig](#output\_kubeconfig) | convenient command to set KUBECONFIG environment variable before running kubectl locally |
 | <a name="output_nodepool_ids"></a> [nodepool\_ids](#output\_nodepool\_ids) | Map of Nodepool names and IDs |
-| <a name="output_operator_private_ip"></a> [operator\_private\_ip](#output\_operator\_private\_ip) | private ip address of operator host |
-| <a name="output_ssh_to_bastion"></a> [ssh\_to\_bastion](#output\_ssh\_to\_bastion) | convenient command to ssh to the bastion host |
-| <a name="output_ssh_to_operator"></a> [ssh\_to\_operator](#output\_ssh\_to\_operator) | convenient command to ssh to the operator host |
 
 <!--- END_TF_DOCS --->

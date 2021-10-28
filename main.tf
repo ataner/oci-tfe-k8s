@@ -1,6 +1,6 @@
 module "oke" {
   source  = "oracle-terraform-modules/oke/oci"
-  version = "4.0.0-RC1"
+  version = "4.0.0"
 
   compartment_id = var.compartment_id
   tenancy_id     = var.tenancy_ocid
@@ -19,6 +19,10 @@ module "oke" {
 
   bastion_shape    = var.bastion_shape
   bastion_timezone = var.bastion_timezone
+
+  create_bastion_host                   =   var.create_bastion_host
+
+  create_operator                       =   var.create_operator
 
   operator_shape    = var.operator_shape
   operator_timezone = var.operator_timezone

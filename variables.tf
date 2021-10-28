@@ -63,6 +63,12 @@ variable "vcn_dns_label" {
 
 # bastion 
 
+variable "create_bastion_host" {
+  default     = true
+  description = "Whether to create a bastion host."
+  type        = bool
+}
+
 variable "bastion_shape" {
   default = {
     # shape = "VM.Standard.E2.2"
@@ -79,6 +85,14 @@ variable "bastion_timezone" {
   default     = "Americas/New York"
   description = "The preferred timezone for the bastion host."
   type        = string
+}
+
+# operator variables
+
+variable "create_operator" {
+  default     = true
+  description = "Whether to create an operator server in a private subnet."
+  type        = bool
 }
 
 variable "operator_shape" {

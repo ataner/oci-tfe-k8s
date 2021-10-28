@@ -8,7 +8,12 @@ output "nodepool_ids" {
   value       = module.oke.nodepool_ids
 }
 
-output "kubeconfig" {
-  description = "convenient command to set KUBECONFIG environment variable before running kubectl locally"
-  value       = "export KUBECONFIG=generated/kubeconfig"
+output "ssh_to_operator" {
+  description = "convenient command to ssh to the operator host"
+  value       = "ssh -i ${var.ssh_private_key_path} -J opc@${local.bastion_public_ip} opc@${local.operator_private_ip}"
+}
+
+output "ssh_to_bastion" {
+  description = "convenient command to ssh to the bastion host"
+  value       = "ssh -i ${var.ssh_private_key_path} opc@${local.bastion_public_ip}"
 }

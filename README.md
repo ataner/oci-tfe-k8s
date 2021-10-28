@@ -16,7 +16,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_oke"></a> [oke](#module\_oke) | oracle-terraform-modules/oke/oci | 4.0.0-RC1 |
+| <a name="module_oke"></a> [oke](#module\_oke) | oracle-terraform-modules/oke/oci | 4.0.0 |
 
 ## Resources
 
@@ -29,6 +29,8 @@ No resources.
 | <a name="input_bastion_shape"></a> [bastion\_shape](#input\_bastion\_shape) | The shape of bastion instance. | `map(any)` | <pre>{<br>  "boot_volume_size": 50,<br>  "memory": 4,<br>  "ocpus": 1,<br>  "shape": "VM.Standard.E3.Flex"<br>}</pre> | no |
 | <a name="input_bastion_timezone"></a> [bastion\_timezone](#input\_bastion\_timezone) | The preferred timezone for the bastion host. | `string` | `"Americas/New York"` | no |
 | <a name="input_compartment_id"></a> [compartment\_id](#input\_compartment\_id) | The compartment id where to create all resources. | `string` | `"ocid1.compartment.oc1..1234567890"` | no |
+| <a name="input_create_bastion_host"></a> [create\_bastion\_host](#input\_create\_bastion\_host) | Whether to create a bastion host. | `bool` | `true` | no |
+| <a name="input_create_operator"></a> [create\_operator](#input\_create\_operator) | Whether to create an operator server in a private subnet. | `bool` | `true` | no |
 | <a name="input_fingerprint"></a> [fingerprint](#input\_fingerprint) | Key fingerprint | `string` | `"AA:BB:CC:DD:EE:FF"` | no |
 | <a name="input_label_prefix"></a> [label\_prefix](#input\_label\_prefix) | A string that will be prepended to all resources. | `string` | `"none"` | no |
 | <a name="input_operator_shape"></a> [operator\_shape](#input\_operator\_shape) | The shape of operator instance. | `map(any)` | <pre>{<br>  "boot_volume_size": 50,<br>  "memory": 4,<br>  "ocpus": 1,<br>  "shape": "VM.Standard.E3.Flex"<br>}</pre> | no |
@@ -47,7 +49,8 @@ No resources.
 | Name | Description |
 |------|-------------|
 | <a name="output_cluster_id"></a> [cluster\_id](#output\_cluster\_id) | ID of the Kubernetes cluster |
-| <a name="output_kubeconfig"></a> [kubeconfig](#output\_kubeconfig) | convenient command to set KUBECONFIG environment variable before running kubectl locally |
 | <a name="output_nodepool_ids"></a> [nodepool\_ids](#output\_nodepool\_ids) | Map of Nodepool names and IDs |
+| <a name="output_ssh_to_bastion"></a> [ssh\_to\_bastion](#output\_ssh\_to\_bastion) | convenient command to ssh to the bastion host |
+| <a name="output_ssh_to_operator"></a> [ssh\_to\_operator](#output\_ssh\_to\_operator) | convenient command to ssh to the operator host |
 
 <!--- END_TF_DOCS --->

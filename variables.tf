@@ -31,7 +31,7 @@ variable "compartment_id" {
 
 # ssh keys
 variable "ssh_private_key" {
-  description = "The ssh private key"
+  description = "The ssh private key, please dont write it here"
   type        = string
 }
 
